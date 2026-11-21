@@ -1,0 +1,32 @@
+{
+  "name": "a2aconnect-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A2AConnect — SDK-agnostic agent interop runtime (LF A2A–compatible)",
+  "homepage": "https://a2aconnect.dev",
+  "workspaces": [
+    "packages/*",
+    "demos/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @a2aconnect/core && npm run build -w @a2aconnect/adapters && npm run build -w a2aconnect-web",
+    "typecheck": "npm run typecheck -w @a2aconnect/core && npm run typecheck -w @a2aconnect/adapters",
+    "test": "npm run test -w @a2aconnect/core",
+    "demo": "npm run start -w @a2aconnect/demo-two-agents",
+    "web": "npm run dev -w a2aconnect-web",
+    "web:build": "npm run build -w a2aconnect-web",
+    "clean": "rm -rf packages/*/dist demos/*/dist apps/web/.next"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashishodu2023/a2aconnect.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ashishodu2023/a2aconnect/issues"
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title }}</title>
+  <link rel="canonical" href="{{ canonical }}" />
+  <meta name="description" content="A2AConnect — SDK-agnostic agent interop for mixed-runtime fleets. LF A2A–compatible. Complements MCP." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/site.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="/">A2AConnect</a>
+    <nav class="nav-links">
+      <a href="/#how-it-fits">How it fits</a>
+      <a href="/architecture">Architecture</a>
+      <a href="/examples">Examples</a>
+      <a href="/#quickstart">Quickstart</a>
+    </nav>
+    <a class="btn btn-ink" href="/#quickstart">Get started</a>
+  </header>
+  <main>{% block content %}{% endblock %}</main>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="brand">A2AConnect</div>
+        <p class="muted" style="color:rgba(232,238,243,0.7)">SDK-agnostic interop for multi-agent fleets. LF A2A–compatible. Complements MCP.</p>
+        <a class="mono" href="https://a2aconnect.dev">a2aconnect.dev</a>
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="/architecture">Architecture</a>
+        <a href="/examples">Examples</a>
+        <a href="https://a2a-protocol.org" rel="noreferrer">LF A2A</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.querySelectorAll('[data-copy]').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const id = btn.getAttribute('data-copy');
+        const el = document.getElementById(id);
+        if (!el) return;
+        await navigator.clipboard.writeText(el.innerText);
+        btn.textContent = 'Copied';
+        setTimeout(() => { btn.textContent = 'Copy'; }, 1400);
+      });
+    });
+  </script>
+</body>
+</html>

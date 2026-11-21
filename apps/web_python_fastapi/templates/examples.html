@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="section">
+  <p class="mono" style="color:var(--signal-dim);text-transform:uppercase;letter-spacing:.1em">Examples</p>
+  <h2>Cross-runtime handoff in one demo</h2>
+  <p class="muted">A custom Python orchestrator hands work to a graph-style peer, then a crew-style peer — same protocol, no shared agent framework.</p>
+  <ol class="steps">
+    <li><strong>1. Handshake</strong><br/><span class="muted">Orchestrator hellos researcher and writer; sessions exchange.</span></li>
+    <li><strong>2. Research offer</strong><br/><span class="muted">task.offer with research.web. Graph-style adapter emits progress and events.</span></li>
+    <li><strong>3. Write offer</strong><br/><span class="muted">Orchestrator forwards notes via write.brief. Crew-style adapter drafts the brief.</span></li>
+    <li><strong>4. Audit</strong><br/><span class="muted">MemoryAuditLog records hello, offer, accept, progress, and result.</span></li>
+  </ol>
+  <div class="code">
+    <div class="code-bar"><span>shell</span><button class="copy-btn" type="button" data-copy="run">Copy</button></div>
+    <pre id="run">pip install -e ".[dev]"
+pytest
+python demos/two_agents.py</pre>
+  </div>
+  <p class="muted" style="margin-top:1rem">Docs: <a href="https://a2aconnect.dev/examples">a2aconnect.dev/examples</a></p>
+  <div style="margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap">
+    <a class="btn btn-ghost" href="/architecture">Architecture</a>
+    <a class="btn btn-signal" href="/#quickstart">Quickstart</a>
+  </div>
+</section>
+{% endblock %}

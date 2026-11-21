@@ -1,0 +1,17 @@
+{
+  "name": "@a2aconnect/demo-two-agents",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx main.ts"
+  },
+  "dependencies": {
+    "@a2aconnect/adapters": "0.1.0",
+    "@a2aconnect/core": "0.1.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}

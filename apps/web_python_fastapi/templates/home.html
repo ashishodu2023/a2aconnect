@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <svg class="mesh" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#1a9f8c" stop-opacity="0" />
+        <stop offset="40%" stop-color="#1a9f8c" stop-opacity="0.55" />
+        <stop offset="100%" stop-color="#e8913a" stop-opacity="0.35" />
+      </linearGradient>
+    </defs>
+    <g stroke="url(#lineGrad)" stroke-width="1.25" fill="none">
+      <path d="M80 420 C220 280, 320 260, 480 320" />
+      <path d="M480 320 C620 380, 700 220, 860 260" />
+      <path d="M860 260 C980 290, 1040 400, 1120 380" />
+      <path d="M200 520 C360 480, 420 560, 560 500" />
+      <path d="M560 500 C720 440, 780 520, 980 480" />
+    </g>
+    <circle class="pulse" cx="480" cy="320" r="7" fill="#1a9f8c" />
+    <circle class="pulse" cx="860" cy="260" r="7" fill="#1a9f8c" style="animation-delay:.3s" />
+    <circle class="pulse" cx="200" cy="520" r="5" fill="#1a9f8c" style="animation-delay:.6s" />
+    <circle class="pulse" cx="980" cy="480" r="5" fill="#1a9f8c" style="animation-delay:.9s" />
+  </svg>
+  <p class="hero-brand">A2AConnect</p>
+  <h1>Hand off work across any agent runtime — without sharing an SDK.</h1>
+  <p>The SDK-agnostic interop layer for multi-agent fleets. LF A2A–compatible. Complements MCP. Built in Python. Docs at <a href="https://a2aconnect.dev">a2aconnect.dev</a>.</p>
+  <div class="hero-cta">
+    <a class="btn btn-signal" href="#quickstart">Quickstart</a>
+    <a class="btn btn-ghost" href="/architecture">See architecture</a>
+  </div>
+</section>
+
+<section class="section" id="how-it-fits" style="background:rgba(255,255,255,0.4)">
+  <div class="grid-2">
+    <div>
+      <h2>How it fits together</h2>
+      <p class="muted">Peers exchange typed envelopes over a pluggable transport. Adapters wrap your existing brains. Policy and audit sit at the boundary. LF A2A for peers on the wire; MCP for tools.</p>
+      <ul class="muted">
+        <li><strong style="color:var(--ink)">Discovery</strong> — hello / hello.ack, then capabilities.query → announce.</li>
+        <li><strong style="color:var(--ink)">Negotiation</strong> — offers list required capabilities; mismatches reject cleanly.</li>
+        <li><strong style="color:var(--ink)">Handoff</strong> — offer → accept → start → progress/events → result.</li>
+        <li><strong style="color:var(--ink)">Governance</strong> — policy allowlists and audit trails for production.</li>
+      </ul>
+      <p><a href="/architecture">Full architecture →</a></p>
+    </div>
+    <div>
+      {% include "partials/layers.html" %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="quickstart">
+  <h2>Quickstart</h2>
+  <p class="muted">Install the Python package, run tests and the cross-runtime demo, or paste the peer snippet into your own process.</p>
+  <div class="grid-2" style="margin-top:2rem">
+    <div class="code">
+      <div class="code-bar"><span>shell</span><button class="copy-btn" type="button" data-copy="install">Copy</button></div>
+      <pre id="install">{{ install }}</pre>
+    </div>
+    <div class="code">
+      <div class="code-bar"><span>Python</span><button class="copy-btn" type="button" data-copy="quickstart">Copy</button></div>
+      <pre id="quickstart">{{ quickstart }}</pre>
+    </div>
+  </div>
+  <p class="muted" style="margin-top:1rem">Walk the two-agent path on the <a href="/examples">examples page</a>.</p>
+</section>
+
+<section class="section dark">
+  <h2>Open-core, sellable fleet control</h2>
+  <p class="muted">OSS forever for the runtime. Charge when fleets go multi-team — not for inventing a wire protocol.</p>
+  <div class="grid-2" style="margin-top:2rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))">
+    <div class="tier"><strong>OSS</strong><p class="muted">PyPI <code>a2aconnect</code>, local transports, policy/audit hooks.</p></div>
+    <div class="tier"><strong>Gateway</strong><p class="muted">Auth, routing, rate limits, multi-tenant registry — roadmap.</p></div>
+    <div class="tier"><strong>Enterprise</strong><p class="muted">SSO/SCIM, VPC, retention, SLA — roadmap.</p></div>
+  </div>
+</section>
+{% endblock %}

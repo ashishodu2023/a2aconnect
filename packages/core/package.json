@@ -1,0 +1,48 @@
+{
+  "name": "@a2aconnect/core",
+  "version": "0.1.0",
+  "description": "A2AConnect core — local interop profile, transports, AgentPeer, policy/audit",
+  "homepage": "https://a2aconnect.dev",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "protocol"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "a2aconnect",
+    "lf-a2a",
+    "agent-interop",
+    "mcp",
+    "sdk-agnostic"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashishodu2023/a2aconnect.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ashishodu2023/a2aconnect/issues"
+  }
+}

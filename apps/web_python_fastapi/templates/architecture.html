@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="section">
+  <p class="mono" style="color:var(--signal-dim);text-transform:uppercase;letter-spacing:.1em">Architecture</p>
+  <h2>Peers, transports, protocol, adapters — and where standards sit</h2>
+  <p class="muted">A2AConnect is the product layer that makes mixed-runtime fleets operable. It does not replace LF A2A or MCP.</p>
+  <div class="grid-2" style="margin-top:2.5rem">
+    <div>{% include "partials/layers.html" %}</div>
+    <div>
+      <h2 style="font-size:1.4rem">Connection flows</h2>
+      <ol class="steps">
+        <li><strong>1. Discovery & handshake</strong><br/><span class="muted">hello → hello.ack (sessionId) → capabilities.query / announce</span></li>
+        <li><strong>2. Capability negotiation</strong><br/><span class="muted">task.offer lists requiredCapabilities; mismatch → task.reject</span></li>
+        <li><strong>3. Task handoff</strong><br/><span class="muted">offer → accept/reject → start → progress/events → result/failed</span></li>
+        <li><strong>4. Streaming</strong><br/><span class="muted">task.progress + event on the same transport; buffer for backpressure</span></li>
+        <li><strong>5. Policy & audit</strong><br/><span class="muted">before_offer / before_accept gates; MemoryAuditLog for trails</span></li>
+      </ol>
+    </div>
+  </div>
+  <p class="muted" style="margin-top:2rem">Canonical docs: <a href="https://a2aconnect.dev/architecture">a2aconnect.dev/architecture</a>. Repo mirrors: <code>docs/architecture.md</code>, <code>protocol/SPEC.md</code>.</p>
+  <div style="margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap">
+    <a class="btn btn-signal" href="/examples">See examples</a>
+    <a class="btn btn-ghost" href="/#quickstart">Quickstart</a>
+  </div>
+</section>
+{% endblock %}

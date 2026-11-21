@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #12202e;
+  --ink-soft: #2a3b4d;
+  --ink-mute: #5c6f82;
+  --mist: #e8eef3;
+  --signal: #1a9f8c;
+  --signal-bright: #24c4ad;
+  --signal-dim: #0f6f62;
+  --ember: #e8913a;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-mute: var(--ink-mute);
+  --color-mist: var(--mist);
+  --color-signal: var(--signal);
+  --color-signal-bright: var(--signal-bright);
+  --color-signal-dim: var(--signal-dim);
+  --color-ember: var(--ember);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(36, 196, 173, 0.18), transparent 55%),
+    radial-gradient(900px 500px at 90% 10%, rgba(232, 145, 58, 0.12), transparent 50%),
+    linear-gradient(165deg, #f4f7fa 0%, #e8eef3 45%, #dfe8ef 100%);
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(26, 159, 140, 0.25);
+}
+
+.mesh-grid {
+  background-image:
+    linear-gradient(rgba(18, 32, 46, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 32, 46, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 20%, transparent 75%);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-node {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+.animate-fade-up-delay {
+  animation: fade-up 0.7s ease-out 0.12s both;
+}
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.7s ease-out 0.24s both;
+}
+.animate-pulse-node {
+  animation: pulse-node 2.8s ease-in-out infinite;
+}
+
+
+/* Syntax highlighting for code panels (brand palette) */
+.code-pre {
+  color: #d7e2ec;
+}
+.tok-plain {
+  color: #d7e2ec;
+}
+.tok-keyword {
+  color: #24c4ad;
+  font-weight: 500;
+}
+.tok-string {
+  color: #f0a35a;
+}
+.tok-comment {
+  color: #7f93a6;
+  font-style: italic;
+}
+.tok-number {
+  color: #7dd3fc;
+}
+.tok-function {
+  color: #5eead4;
+}
+.tok-decorator {
+  color: #fbbf24;
+}
+.tok-operator {
+  color: #94a8b8;
+}
+.tok-punct {
+  color: #8aa0b2;
+}
+.tok-property {
+  color: #a5b4fc;
+}
+.tok-shell-cmd {
+  color: #24c4ad;
+  font-weight: 500;
+}
+.tok-shell-flag {
+  color: #7dd3fc;
+}
+
+
+/* Architecture page motion */
+@keyframes arch-dash {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+@keyframes arch-glow {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+@keyframes arch-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes arch-flow-dot {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+.arch-dash {
+  stroke-dasharray: 6 8;
+  animation: arch-dash 1.2s linear infinite;
+}
+.arch-glow {
+  animation: arch-glow 3s ease-in-out infinite;
+}
+.arch-rise {
+  animation: arch-rise 0.7s ease-out both;
+}
+.arch-rise-2 {
+  animation: arch-rise 0.7s ease-out 0.1s both;
+}
+.arch-rise-3 {
+  animation: arch-rise 0.7s ease-out 0.2s both;
+}
+.arch-rise-4 {
+  animation: arch-rise 0.7s ease-out 0.3s both;
+}
+.arch-layer {
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+.arch-layer:hover {
+  transform: translateY(-2px);
+  border-color: rgba(26, 159, 140, 0.45);
+  background: rgba(255, 255, 255, 0.92);
+}

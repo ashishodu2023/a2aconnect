@@ -1,0 +1,5 @@
+Canonical local path on the author's machine:
+  /home/ashishsverma/Downloads/a2aconnect
+
+Refresh this folder from the zip/bundle artifact produced by the Cursor agent.
+Do not expect the cloud VM to write here directly.
