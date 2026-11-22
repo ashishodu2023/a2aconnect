@@ -53,21 +53,14 @@ export default function ArchitecturePage() {
   return (
     <div className="pb-20">
       {/* Hero band */}
-      <section className="relative overflow-hidden border-b border-ink/10">
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(900px 420px at 10% -20%, rgba(36,196,173,0.2), transparent 55%), radial-gradient(700px 380px at 90% 0%, rgba(232,145,58,0.14), transparent 50%)",
-          }}
-          aria-hidden
-        />
-        <div className="relative mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
-          <p className="arch-rise font-mono text-xs uppercase tracking-[0.14em] text-signal-dim">Architecture</p>
-          <h1 className="arch-rise-2 mt-3 max-w-4xl font-display text-3xl font-extrabold leading-tight text-ink md:text-5xl">
+      <section className="relative overflow-hidden border-b border-ink/8">
+        <div className="noise-overlay absolute inset-0 opacity-40" aria-hidden />
+        <div className="relative mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
+          <p className="arch-rise section-label">Architecture</p>
+          <h1 className="arch-rise-2 mt-4 max-w-3xl font-display text-3xl font-semibold tracking-[-0.04em] text-ink md:text-[2.75rem]">
             The interop plane between agent brains — detailed.
           </h1>
-          <p className="arch-rise-3 mt-5 max-w-2xl text-base text-ink-mute md:text-lg">
+          <p className="arch-rise-3 mt-5 max-w-2xl text-[1.05rem] leading-relaxed text-ink-mute">
             A2AConnect is the product layer that makes mixed-runtime fleets operable: adapters, AgentPeer,
             policy, audit, and pluggable transport. It maps to LF A2A and sits beside MCP — it does not
             invent a rival wire standard.
@@ -79,8 +72,8 @@ export default function ArchitecturePage() {
       <section className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-16">
         <div className="mb-6 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-signal-dim">System map</p>
-            <h2 className="mt-1 font-display text-2xl font-bold text-ink md:text-3xl">
+            <p className="section-label">System map</p>
+            <h2 className="mt-2 font-display text-2xl font-semibold tracking-[-0.035em] text-ink md:text-[1.85rem]">
               Three peers. One bus. Governed handoff.
             </h2>
           </div>
@@ -96,8 +89,8 @@ export default function ArchitecturePage() {
       <section className="border-y border-ink/5 bg-white/35">
         <div className="mx-auto grid max-w-6xl gap-12 px-5 py-14 md:grid-cols-2 md:px-8 md:py-16">
           <div>
-            <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-signal-dim">Stack layers</p>
-            <h2 className="mt-1 font-display text-2xl font-bold text-ink md:text-3xl">Top to bottom</h2>
+            <p className="section-label">Stack layers</p>
+            <h2 className="mt-2 font-display text-2xl font-semibold tracking-[-0.035em] text-ink md:text-[1.85rem]">Top to bottom</h2>
             <p className="mt-3 text-sm text-ink-mute">
               Each layer has one job. Brains stay swappable; the envelope and governance stay stable.
             </p>
@@ -106,13 +99,13 @@ export default function ArchitecturePage() {
             </div>
           </div>
           <div>
-            <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-ember">Standards map</p>
-            <h2 className="mt-1 font-display text-2xl font-bold text-ink md:text-3xl">Where LF A2A & MCP sit</h2>
+            <p className="section-label !text-ember">Standards map</p>
+            <h2 className="mt-2 font-display text-2xl font-semibold tracking-[-0.035em] text-ink md:text-[1.85rem]">Where LF A2A & MCP sit</h2>
             <p className="mt-3 text-sm text-ink-mute">
               Local interop profile for DX and tests; conceptual bridge to LF A2A on the roadmap. MCP remains
               the tools plane.
             </p>
-            <div className="mt-8 overflow-hidden rounded-xl border border-ink/10 bg-white/70">
+            <div className="mt-8 overflow-hidden rounded-sm border border-ink/10 bg-white/80">
               <table className="w-full text-left text-sm">
                 <thead className="border-b border-ink/10 bg-ink/[0.03] font-mono text-[10px] uppercase tracking-wider text-ink-mute">
                   <tr>
@@ -138,8 +131,8 @@ export default function ArchitecturePage() {
 
       {/* Lifecycle */}
       <section className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-16">
-        <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-signal-dim">Connection lifecycle</p>
-        <h2 className="mt-1 max-w-2xl font-display text-2xl font-bold text-ink md:text-3xl">
+        <p className="section-label">Connection lifecycle</p>
+        <h2 className="mt-2 max-w-2xl font-display text-2xl font-semibold tracking-[-0.035em] text-ink md:text-[1.85rem]">
           From hello to audited result
         </h2>
         <p className="mt-3 max-w-2xl text-sm text-ink-mute">
@@ -154,8 +147,8 @@ export default function ArchitecturePage() {
       <section className="border-t border-ink/5 bg-ink text-mist">
         <div className="mx-auto grid max-w-6xl gap-12 px-5 py-14 md:grid-cols-2 md:px-8 md:py-16">
           <div>
-            <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-signal-bright">Envelope</p>
-            <h2 className="mt-1 font-display text-2xl font-bold md:text-3xl">Every message is typed JSON</h2>
+            <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-signal-bright/90">Envelope</p>
+            <h2 className="mt-2 font-display text-2xl font-semibold tracking-[-0.035em] md:text-[1.85rem]">Every message is typed JSON</h2>
             <p className="mt-3 text-sm text-mist/70">
               Stable headers, swappable payload. Correlation and session ids stitch the handoff together.
             </p>
@@ -169,8 +162,8 @@ export default function ArchitecturePage() {
             </ul>
           </div>
           <div>
-            <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-ember">Transports</p>
-            <h2 className="mt-1 font-display text-2xl font-bold md:text-3xl">Same peers, different pipes</h2>
+            <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-ember">Transports</p>
+            <h2 className="mt-2 font-display text-2xl font-semibold tracking-[-0.035em] md:text-[1.85rem]">Same peers, different pipes</h2>
             <p className="mt-3 text-sm text-mist/70">
               Swap the transport; keep AgentPeer, adapters, policy, and audit.
             </p>
@@ -178,7 +171,7 @@ export default function ArchitecturePage() {
               {transports.map((t, i) => (
                 <div
                   key={t.name}
-                  className="rounded-xl border border-white/10 bg-white/5 px-4 py-4"
+                  className="rounded-sm border border-white/10 bg-white/5 px-4 py-4"
                   style={{ animationDelay: `${i * 0.08}s` }}
                 >
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
@@ -204,16 +197,10 @@ export default function ArchitecturePage() {
           <code className="font-mono text-xs">protocol/SPEC.md</code>.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link
-            href="/examples"
-            className="rounded-md bg-signal px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-signal-dim"
-          >
+          <Link href="/examples" className="btn-primary">
             See real examples
           </Link>
-          <HashLink
-            href="/#quickstart"
-            className="rounded-md border border-ink/15 bg-white/50 px-5 py-2.5 text-sm font-semibold text-ink transition hover:border-signal/40"
-          >
+          <HashLink href="/#quickstart" className="btn-secondary">
             Get started
           </HashLink>
         </div>

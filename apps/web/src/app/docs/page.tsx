@@ -65,21 +65,14 @@ audit = MemoryAuditLog()
 export default function DocsPage() {
   return (
     <div className="pb-20">
-      <section className="relative overflow-hidden border-b border-ink/10">
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(800px 360px at 15% -10%, rgba(36,196,173,0.16), transparent 55%)",
-          }}
-          aria-hidden
-        />
-        <div className="relative mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-16">
-          <p className="font-mono text-xs uppercase tracking-[0.12em] text-signal-dim">Documentation</p>
-          <h1 className="mt-3 max-w-3xl font-display text-3xl font-extrabold text-ink md:text-5xl">
+      <section className="relative overflow-hidden border-b border-ink/8">
+        <div className="noise-overlay absolute inset-0 opacity-40" aria-hidden />
+        <div className="relative mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
+          <p className="section-label">Documentation</p>
+          <h1 className="mt-4 max-w-3xl font-display text-3xl font-semibold tracking-[-0.04em] text-ink md:text-[2.75rem]">
             Guides, API, and the interop profile
           </h1>
-          <p className="mt-4 max-w-2xl text-ink-mute md:text-lg">
+          <p className="mt-5 max-w-2xl text-[1.05rem] leading-relaxed text-ink-mute">
             Product pages on this site plus the full markdown docs in the repository. Start with a runnable
             demo, then dig into the SPEC and Python API.
           </p>
@@ -87,36 +80,36 @@ export default function DocsPage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-14">
-        <h2 className="font-display text-2xl font-bold text-ink">On this site</h2>
-        <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <h2 className="font-display text-2xl font-semibold tracking-[-0.035em] text-ink">On this site</h2>
+        <div className="mt-6 grid gap-px overflow-hidden rounded-sm border border-ink/10 bg-ink/10 md:grid-cols-2 lg:grid-cols-3">
           {guides.map((g) =>
             g.hash ? (
               <HashLink
                 key={g.title}
                 href={g.href}
-                className="block rounded-xl border border-ink/10 bg-white/60 px-4 py-4 transition hover:border-signal/40"
+                className="block bg-white/80 px-5 py-5 transition hover:bg-white"
               >
-                <p className="font-display font-semibold text-ink">{g.title}</p>
-                <p className="mt-2 text-sm text-ink-mute">{g.detail}</p>
+                <p className="font-display font-semibold tracking-[-0.02em] text-ink">{g.title}</p>
+                <p className="mt-2 text-sm leading-relaxed text-ink-mute">{g.detail}</p>
               </HashLink>
             ) : (
               <Link
                 key={g.title}
                 href={g.href}
-                className="block rounded-xl border border-ink/10 bg-white/60 px-4 py-4 transition hover:border-signal/40"
+                className="block bg-white/80 px-5 py-5 transition hover:bg-white"
               >
-                <p className="font-display font-semibold text-ink">{g.title}</p>
-                <p className="mt-2 text-sm text-ink-mute">{g.detail}</p>
+                <p className="font-display font-semibold tracking-[-0.02em] text-ink">{g.title}</p>
+                <p className="mt-2 text-sm leading-relaxed text-ink-mute">{g.detail}</p>
               </Link>
             ),
           )}
         </div>
       </section>
 
-      <section className="border-y border-ink/5 bg-white/35">
+      <section className="border-y border-ink/8 bg-white/40">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 md:grid-cols-2 md:px-8 md:py-14">
           <div>
-            <h2 className="font-display text-2xl font-bold text-ink">In the repository</h2>
+            <h2 className="font-display text-2xl font-semibold tracking-[-0.035em] text-ink">In the repository</h2>
             <p className="mt-3 text-sm text-ink-mute">
               After you unzip or clone the project, these paths are the canonical written docs.
             </p>
@@ -130,7 +123,7 @@ export default function DocsPage() {
             </ul>
           </div>
           <div>
-            <h2 className="font-display text-2xl font-bold text-ink">API at a glance</h2>
+            <h2 className="font-display text-2xl font-semibold tracking-[-0.035em] text-ink">API at a glance</h2>
             <p className="mt-3 text-sm text-ink-mute">
               Full reference: <code className="font-mono text-xs">docs/python-api.md</code>
             </p>
@@ -143,16 +136,10 @@ export default function DocsPage() {
 
       <section className="mx-auto max-w-6xl px-5 pt-12 md:px-8">
         <div className="flex flex-wrap gap-3">
-          <HashLink
-            href="/#quickstart"
-            className="rounded-md bg-signal px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-signal-dim"
-          >
+          <HashLink href="/#quickstart" className="btn-primary">
             Get started
           </HashLink>
-          <Link
-            href="/examples"
-            className="rounded-md border border-ink/15 bg-white/50 px-5 py-2.5 text-sm font-semibold text-ink transition hover:border-signal/40"
-          >
+          <Link href="/examples" className="btn-secondary">
             Run examples
           </Link>
         </div>

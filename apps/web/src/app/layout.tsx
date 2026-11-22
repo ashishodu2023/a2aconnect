@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { DM_Sans, IBM_Plex_Mono, Syne } from "next/font/google";
+import { IBM_Plex_Mono, Instrument_Sans, Source_Sans_3 } from "next/font/google";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ScrollToHash } from "@/components/ScrollToHash";
 import { SiteNav } from "@/components/SiteNav";
 import "./globals.css";
 
-const display = Syne({
+const display = Instrument_Sans({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["600", "700", "800"],
+  weight: ["500", "600", "700"],
 });
 
-const body = DM_Sans({
+const body = Source_Sans_3({
   subsets: ["latin"],
   variable: "--font-body",
   weight: ["400", "500", "600", "700"],

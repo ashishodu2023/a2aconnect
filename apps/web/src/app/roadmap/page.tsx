@@ -29,43 +29,45 @@ const commercial = [
 
 export default function RoadmapPage() {
   return (
-    <div className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
-      <p className="font-mono text-xs uppercase tracking-[0.12em] text-signal-dim">Roadmap</p>
-      <h1 className="mt-3 font-display text-3xl font-extrabold text-ink md:text-5xl">
+    <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
+      <p className="section-label">Roadmap</p>
+      <h1 className="mt-4 font-display text-3xl font-semibold tracking-[-0.04em] text-ink md:text-[2.75rem]">
         Scope expanding in the open
       </h1>
-      <p className="mt-4 max-w-2xl text-ink-mute">
+      <p className="mt-5 max-w-2xl text-[1.05rem] leading-relaxed text-ink-mute">
         OSS stays the interop runtime. Gateway and Enterprise add hosted control — not a rival wire
         standard.
       </p>
 
-      <section className="mt-12">
-        <h2 className="font-display text-2xl font-bold text-ink">Shipped</h2>
-        <ul className="mt-4 space-y-2">
+      <section className="mt-14">
+        <h2 className="font-display text-xl font-semibold tracking-[-0.03em] text-ink">Shipped</h2>
+        <ul className="mt-5 divide-y divide-ink/8 border-y border-ink/8">
           {shipped.map((item) => (
-            <li key={item} className="flex gap-2 text-ink-mute">
-              <span className="text-signal-dim">✓</span> {item}
+            <li key={item} className="flex gap-3 py-3.5 text-ink-mute">
+              <span className="font-mono text-xs text-signal-dim">✓</span>
+              <span>{item}</span>
             </li>
           ))}
         </ul>
       </section>
 
-      <section className="mt-12">
-        <h2 className="font-display text-2xl font-bold text-ink">Next</h2>
-        <ul className="mt-4 space-y-2">
+      <section className="mt-14">
+        <h2 className="font-display text-xl font-semibold tracking-[-0.03em] text-ink">Next</h2>
+        <ul className="mt-5 divide-y divide-ink/8 border-y border-ink/8">
           {nextUp.map((item) => (
-            <li key={item} className="flex gap-2 text-ink-mute">
-              <span className="text-ember">→</span> {item}
+            <li key={item} className="flex gap-3 py-3.5 text-ink-mute">
+              <span className="font-mono text-xs text-ember">→</span>
+              <span>{item}</span>
             </li>
           ))}
         </ul>
       </section>
 
-      <section className="mt-12 grid gap-4 md:grid-cols-2">
+      <section className="mt-14 grid gap-px overflow-hidden rounded-sm border border-ink/10 bg-ink/10 md:grid-cols-2">
         {commercial.map((block) => (
-          <div key={block.tier} className="rounded-xl border border-ink/10 bg-white/60 px-5 py-5">
-            <p className="font-display text-lg font-semibold text-ink">{block.tier}</p>
-            <ul className="mt-3 space-y-1 text-sm text-ink-mute">
+          <div key={block.tier} className="bg-white/80 px-6 py-6">
+            <p className="font-display text-lg font-semibold tracking-[-0.03em] text-ink">{block.tier}</p>
+            <ul className="mt-3 space-y-1.5 text-sm text-ink-mute">
               {block.items.map((i) => (
                 <li key={i}>{i}</li>
               ))}
@@ -74,11 +76,11 @@ export default function RoadmapPage() {
         ))}
       </section>
 
-      <div className="mt-10 flex flex-wrap gap-3">
-        <Link href="/docs" className="rounded-md bg-signal px-5 py-2.5 text-sm font-semibold text-white hover:bg-signal-dim">
+      <div className="mt-12 flex flex-wrap gap-3">
+        <Link href="/docs" className="btn-primary">
           Docs
         </Link>
-        <Link href="/examples" className="rounded-md border border-ink/15 bg-white/50 px-5 py-2.5 text-sm font-semibold text-ink">
+        <Link href="/examples" className="btn-secondary">
           Examples
         </Link>
       </div>

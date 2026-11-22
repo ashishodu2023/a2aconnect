@@ -58,7 +58,7 @@ export function ArchitectureLifecycle() {
               <span className="absolute left-0 top-2 h-6 w-6 -translate-x-[0.35rem] rounded-full border-2 border-signal bg-mist md:left-1/2 md:-translate-x-1/2" aria-hidden>
                 <span className="absolute inset-1 rounded-full bg-signal arch-glow" />
               </span>
-              <div className="rounded-xl border border-ink/10 bg-white/60 px-4 py-3 backdrop-blur-sm">
+              <div className="rounded-sm border border-ink/10 bg-white/80 px-4 py-3">
                 <p className="font-mono text-[10px] uppercase tracking-wider text-ink-mute">Wire types</p>
                 <div className="mt-2 flex flex-wrap gap-2">
                   {phase.messages.map((m) => (

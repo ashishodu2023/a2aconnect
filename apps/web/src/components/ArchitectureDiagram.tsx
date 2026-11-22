@@ -42,7 +42,7 @@ export function ArchitectureDiagram({ compact = false }: { compact?: boolean }) 
       {layers.map((layer, i) => (
         <div key={layer.title} className={compact ? undefined : `arch-rise-${Math.min(i + 1, 4)}`}>
           <div
-            className={`arch-layer rounded-xl border border-ink/10 bg-white/70 px-4 py-3 backdrop-blur-sm md:px-5 md:py-4 ${
+            className={`arch-layer rounded-sm border border-ink/10 bg-white/80 px-4 py-3 md:px-5 md:py-4 ${
               layer.accent === "ember" ? "hover:border-ember/40" : ""
             }`}
           >
@@ -71,15 +71,15 @@ export function ArchitectureDiagram({ compact = false }: { compact?: boolean }) 
         </div>
       ))}
       <div className="grid gap-3 pt-3 md:grid-cols-2">
-        <div className="rounded-xl border border-signal/30 bg-signal/5 px-4 py-3">
-          <p className="font-display text-sm font-semibold text-signal-dim">LF A2A</p>
-          <p className="mt-1 text-sm text-ink-mute">
+        <div className="rounded-sm border border-signal/25 bg-signal/5 px-4 py-3">
+          <p className="font-display text-sm font-semibold tracking-[-0.02em] text-signal-dim">LF A2A</p>
+          <p className="mt-1 text-sm leading-relaxed text-ink-mute">
             Industry peer wire standard. A2AConnect maps profile ≈ Agent Card, task.* ≈ Task lifecycle — does not replace it.
           </p>
         </div>
-        <div className="rounded-xl border border-ember/30 bg-ember/5 px-4 py-3">
-          <p className="font-display text-sm font-semibold text-ember">MCP</p>
-          <p className="mt-1 text-sm text-ink-mute">
+        <div className="rounded-sm border border-ember/25 bg-ember/5 px-4 py-3">
+          <p className="font-display text-sm font-semibold tracking-[-0.02em] text-ember">MCP</p>
+          <p className="mt-1 text-sm leading-relaxed text-ink-mute">
             Agent ↔ tools/data. Orthogonal vertical: use MCP for tools, A2AConnect for peer handoff.
           </p>
         </div>
