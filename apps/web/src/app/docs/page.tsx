@@ -33,9 +33,11 @@ const guides = [
 
 const repoDocs = [
   { path: "docs/getting-started.md", title: "Getting started (repo)" },
-  { path: "docs/gateway.md", title: "Gateway preview" },
-  { path: "docs/bridge-lf-a2a.md", title: "LF A2A bridge" },
-  { path: "ROADMAP.md", title: "Roadmap" },
+  { path: "docs/gateway.md", title: "Gateway (auth, routing, retention)" },
+  { path: "docs/enterprise.md", title: "Enterprise (SSO, VPC, SLA)" },
+  { path: "docs/http-peer-server.md", title: "HTTP peer server" },
+  { path: "docs/bridge-lf-a2a.md", title: "LF A2A wire bridge" },
+  { path: "docs/observability.md", title: "OTLP observability" },
   { path: "docs/python-api.md", title: "Python API" },
   { path: "docs/adapters.md", title: "Adapters" },
   { path: "docs/transports.md", title: "Transports" },

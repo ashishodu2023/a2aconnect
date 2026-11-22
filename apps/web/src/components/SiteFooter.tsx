@@ -29,9 +29,6 @@ export function SiteFooter() {
               <Link href="/docs" className="transition hover:text-white">
                 Documentation
               </Link>
-              <Link href="/roadmap" className="transition hover:text-white">
-                Roadmap
-              </Link>
             </div>
           </div>
           <div>

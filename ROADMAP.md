@@ -7,25 +7,27 @@
 - [x] Transports: in-memory, buffered, HTTP JSON stub
 - [x] Policy + `MemoryAuditLog`
 - [x] Executable demos + Next.js site at a2aconnect.dev
-- [x] Gateway **preview**: registry, token gate, rate limit (in-process)
-- [x] LF A2A bridge **scaffold** (conceptual Agent Card map)
 - [x] CLI (`a2aconnect doctor|demo|map|card`)
+- [x] Gateway **OSS preview**: hosted auth & registry, edge routing & quotas, audit retention
+- [x] Enterprise **OSS preview**: SSO / SCIM, VPC networking, SLA & support
+- [x] Multi-host HTTP peer server (`HttpPeerServer`)
+- [x] On-wire LF A2A bridge adapter (`LfA2AWireAdapter`)
+- [x] OTLP / observability exporters (`MemorySpanExporter`, `OtlpJsonExporter`)
 
 ## Next
 
-- [ ] Real HTTP peer server (ASGI) for multi-host demos
-- [ ] LF A2A on-wire bridge adapter (beyond scaffold)
 - [ ] Typed SDK generators / OpenAPI for envelopes
-- [ ] Observability exporters (OTLP)
+- [ ] Managed OTLP collectors + dashboards
+- [ ] Full LF A2A compliance test suite against reference peers
 
-## Gateway (commercial)
+## Gateway (commercial hosted)
 
-- [ ] Hosted auth & multi-tenant registry
-- [ ] Routing, quotas, rate limits at the edge
-- [ ] Hosted audit retention
+- [ ] Multi-tenant hosted control plane
+- [ ] Edge routing & quotas as a managed service
+- [ ] Hosted audit retention with durability SLAs
 
-## Enterprise
+## Enterprise (commercial hosted)
 
-- [ ] SSO / SCIM
+- [ ] Managed SSO / SCIM against customer IdPs
 - [ ] VPC / private networking
-- [ ] SLA + support
+- [ ] SLA + support desk

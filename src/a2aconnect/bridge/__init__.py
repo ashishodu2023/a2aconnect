@@ -1,10 +1,6 @@
-"""LF A2A bridge scaffold (roadmap).
-
-Maps local interop profile concepts to LF A2A surfaces. The wire adapter that
-speaks LF A2A on the network is not implemented yet — use these helpers for
-documentation and future integration tests.
-"""
+"""LF A2A bridge — conceptual map + on-wire adapter preview."""
 
 from a2aconnect.bridge.mapping import LOCAL_TO_A2A, profile_to_agent_card_stub
+from a2aconnect.bridge.wire import LfA2AWireAdapter
 
-__all__ = ["LOCAL_TO_A2A", "profile_to_agent_card_stub"]
+__all__ = ["LOCAL_TO_A2A", "LfA2AWireAdapter", "profile_to_agent_card_stub"]

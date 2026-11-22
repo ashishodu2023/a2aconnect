@@ -10,25 +10,30 @@ export default {
     extend: {
       colors: {
         ink: {
-          DEFAULT: "#0c1522",
-          soft: "#1e2d3d",
-          mute: "#5a6b7c",
+          DEFAULT: "#0f1c28",
+          soft: "#1e3344",
+          mute: "#6b8294",
         },
         paper: {
-          DEFAULT: "#f3f5f7",
-          deep: "#e6eaef",
+          DEFAULT: "#f4f7fa",
+          deep: "#e4ecf2",
         },
         mist: {
-          DEFAULT: "#eef1f4",
+          DEFAULT: "#e8eef3",
           deep: "#d3dde7",
         },
         signal: {
-          DEFAULT: "#0e7c6b",
-          bright: "#1aa890",
-          dim: "#0a5c50",
+          DEFAULT: "#1a9f8c",
+          bright: "#24c4ad",
+          dim: "#0f6f62",
         },
         ember: {
-          DEFAULT: "#c47a2c",
+          DEFAULT: "#e8913a",
+          soft: "#f0a35a",
+        },
+        panel: {
+          DEFAULT: "#12202e",
+          deep: "#0f1c28",
         },
       },
       fontFamily: {

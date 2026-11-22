@@ -6,7 +6,7 @@ from dataclasses import dataclass
 
 @dataclass
 class TokenBucket:
-    """Token bucket rate limiter (Gateway preview)."""
+    """Token bucket rate limiter (Gateway edge preview)."""
 
     rate_per_sec: float
     capacity: float

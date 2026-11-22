@@ -10,6 +10,7 @@ from a2aconnect.peer import AgentPeer, MemoryAuditLog
 from a2aconnect.protocol import PROTOCOL_VERSION, A2AError, create_envelope, create_id
 from a2aconnect.transport import (
     HttpJsonTransport,
+    HttpPeerServer,
     InMemoryBus,
     create_bus,
     reset_http_json_stubs,
@@ -23,6 +24,7 @@ __all__ = [
     "AgentPeer",
     "MemoryAuditLog",
     "HttpJsonTransport",
+    "HttpPeerServer",
     "InMemoryBus",
     "create_bus",
     "create_crew_style_adapter",
@@ -39,15 +41,63 @@ __all__ = [
 
 __version__ = "0.1.0"
 
-# Gateway preview + LF A2A bridge scaffold
-from a2aconnect.gateway import AgentRegistry, RegisteredAgent, StaticTokenGate, TokenBucket
-from a2aconnect.bridge import LOCAL_TO_A2A, profile_to_agent_card_stub
+# Gateway + Enterprise + Next (HTTP peer, LF A2A wire, OTLP)
+from a2aconnect.bridge import LOCAL_TO_A2A, LfA2AWireAdapter, profile_to_agent_card_stub
+from a2aconnect.observability import MemorySpanExporter, OtlpJsonExporter, SpanRecord
+from a2aconnect.enterprise import (
+    ScimDirectory,
+    ScimGroup,
+    ScimUser,
+    SlaRecord,
+    SlaTracker,
+    SsoAssertion,
+    SsoSession,
+    SsoSessionStore,
+    VpcNetworkPolicy,
+)
+from a2aconnect.gateway import (
+    AgentRegistry,
+    AuthResult,
+    EdgeRouter,
+    HostedAuditRetention,
+    HostedAuthStore,
+    QuotaLedger,
+    QuotaStatus,
+    RegisteredAgent,
+    RetentionPolicy,
+    RouteDecision,
+    StaticTokenGate,
+    TenantCredential,
+    TokenBucket,
+)
 
 __all__ += [
     "AgentRegistry",
+    "AuthResult",
+    "EdgeRouter",
+    "HostedAuditRetention",
+    "HostedAuthStore",
+    "QuotaLedger",
+    "QuotaStatus",
     "RegisteredAgent",
+    "RetentionPolicy",
+    "RouteDecision",
+    "ScimDirectory",
+    "ScimGroup",
+    "ScimUser",
+    "SlaRecord",
+    "SlaTracker",
+    "SsoAssertion",
+    "SsoSession",
+    "SsoSessionStore",
     "StaticTokenGate",
+    "TenantCredential",
     "TokenBucket",
+    "VpcNetworkPolicy",
     "LOCAL_TO_A2A",
+    "LfA2AWireAdapter",
+    "MemorySpanExporter",
+    "OtlpJsonExporter",
+    "SpanRecord",
     "profile_to_agent_card_stub",
 ]

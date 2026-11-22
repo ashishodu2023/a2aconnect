@@ -16,6 +16,8 @@ pytest
 | Cross-runtime brief | `python demos/two_agents.py` | orchestrator → researcher → writer | Research JSON + markdown brief + audit |
 | Minimal research | `python demos/quickstart.py` | orchestrator → researcher | Findings JSON + audit |
 | Registry hub | `python demos/registry_hub.py` | hub → summarizer via registry | Gateway preview + Agent Card stub |
+| Gateway + Enterprise | `python demos/gateway_enterprise.py` | SSO → VPC → auth → route → handoff → SLA | Full Gateway & Enterprise preview path |
+| Next stack | `python demos/next_stack.py` | HTTP peer + LF A2A wire + OTLP spans | Multi-host server, bridge, observability |
 
 ## Expected output
 

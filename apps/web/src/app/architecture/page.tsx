@@ -102,7 +102,7 @@ export default function ArchitecturePage() {
             <p className="section-label !text-ember">Standards map</p>
             <h2 className="mt-2 font-display text-2xl font-semibold tracking-[-0.035em] text-ink md:text-[1.85rem]">Where LF A2A & MCP sit</h2>
             <p className="mt-3 text-sm text-ink-mute">
-              Local interop profile for DX and tests; conceptual bridge to LF A2A on the roadmap. MCP remains
+              Local interop profile for DX and tests; conceptual bridge to LF A2A as the wire standard. MCP remains
               the tools plane.
             </p>
             <div className="mt-8 overflow-hidden rounded-sm border border-ink/10 bg-white/80">

@@ -93,8 +93,13 @@ class HttpJsonTransport:
                 import json
                 import urllib.request
 
+                poll_url = (
+                    f"{self.endpoint}/v1/poll/{self.agent_id}"
+                    if self.agent_id
+                    else f"{self.endpoint}/poll"
+                )
                 req = urllib.request.Request(
-                    f"{self.endpoint}/poll",
+                    poll_url,
                     headers={"accept": "application/json"},
                     method="GET",
                 )

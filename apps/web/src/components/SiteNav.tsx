@@ -6,7 +6,6 @@ const links = [
   { href: "/architecture", label: "Architecture" },
   { href: "/examples", label: "Examples" },
   { href: "/docs", label: "Docs" },
-  { href: "/roadmap", label: "Roadmap" },
 ];
 
 export function SiteNav() {
