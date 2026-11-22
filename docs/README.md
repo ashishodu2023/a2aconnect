@@ -24,3 +24,5 @@
 ## Demos
 
 See [demos/README.md](../demos/README.md) for executable agent→agent scripts.
+
+Also see [ROADMAP.md](../ROADMAP.md), [SECURITY.md](../SECURITY.md).

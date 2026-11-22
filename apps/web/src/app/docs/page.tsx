@@ -33,6 +33,9 @@ const guides = [
 
 const repoDocs = [
   { path: "docs/getting-started.md", title: "Getting started (repo)" },
+  { path: "docs/gateway.md", title: "Gateway preview" },
+  { path: "docs/bridge-lf-a2a.md", title: "LF A2A bridge" },
+  { path: "ROADMAP.md", title: "Roadmap" },
   { path: "docs/python-api.md", title: "Python API" },
   { path: "docs/adapters.md", title: "Adapters" },
   { path: "docs/transports.md", title: "Transports" },
@@ -85,7 +88,7 @@ export default function DocsPage() {
 
       <section className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-14">
         <h2 className="font-display text-2xl font-bold text-ink">On this site</h2>
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
+        <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {guides.map((g) =>
             g.hash ? (
               <HashLink

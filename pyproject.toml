@@ -10,7 +10,7 @@ readme = "README.md"
 license = "MIT"
 requires-python = ">=3.11"
 authors = [{ name = "A2AConnect contributors" }]
-keywords = ["a2aconnect", "lf-a2a", "agent-interop", "mcp", "multi-agent"]
+keywords = ["a2aconnect", "lf-a2a", "agent-interop", "mcp", "multi-agent", "gateway"]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
@@ -23,13 +23,16 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Homepage = "https://a2aconnect.dev"
-Documentation = "https://a2aconnect.dev"
+Homepage = "https://www.a2aconnect.dev"
+Documentation = "https://www.a2aconnect.dev/docs"
 Repository = "https://github.com/ashishodu2023/a2aconnect"
 
 [project.optional-dependencies]
 web = ["fastapi>=0.115", "uvicorn[standard]>=0.32", "jinja2>=3.1"]
 dev = ["pytest>=8.0", "pytest-asyncio>=0.24", "httpx>=0.27"]
+
+[project.scripts]
+a2aconnect = "a2aconnect.cli.main:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/a2aconnect"]

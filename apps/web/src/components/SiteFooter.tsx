@@ -17,6 +17,7 @@ export function SiteFooter() {
           <Link href="/architecture" className="hover:text-signal-bright">Architecture</Link>
           <Link href="/examples" className="hover:text-signal-bright">Examples</Link>
           <Link href="/docs" className="hover:text-signal-bright">Docs</Link>
+          <Link href="/roadmap" className="hover:text-signal-bright">Roadmap</Link>
           <a href="https://a2a-protocol.org" className="hover:text-signal-bright" rel="noreferrer">LF A2A</a>
         </div>
       </div>

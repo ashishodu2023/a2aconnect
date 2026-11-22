@@ -2,12 +2,12 @@
   "name": "a2aconnect-monorepo",
   "private": true,
   "version": "0.1.0",
-  "description": "A2AConnect — SDK-agnostic agent interop runtime (LF A2A–compatible)",
-  "homepage": "https://a2aconnect.dev",
+  "description": "A2AConnect \u2014 SDK-agnostic agent interop runtime (LF A2A\u2013compatible)",
+  "homepage": "https://www.a2aconnect.dev",
   "workspaces": [
     "packages/*",
-    "demos/*",
-    "apps/*"
+    "demos/two-agents",
+    "apps/web"
   ],
   "scripts": {
     "build": "npm run build -w @a2aconnect/core && npm run build -w @a2aconnect/adapters && npm run build -w a2aconnect-web",

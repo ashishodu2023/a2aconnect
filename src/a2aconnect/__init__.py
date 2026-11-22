@@ -38,3 +38,16 @@ __all__ = [
 ]
 
 __version__ = "0.1.0"
+
+# Gateway preview + LF A2A bridge scaffold
+from a2aconnect.gateway import AgentRegistry, RegisteredAgent, StaticTokenGate, TokenBucket
+from a2aconnect.bridge import LOCAL_TO_A2A, profile_to_agent_card_stub
+
+__all__ += [
+    "AgentRegistry",
+    "RegisteredAgent",
+    "StaticTokenGate",
+    "TokenBucket",
+    "LOCAL_TO_A2A",
+    "profile_to_agent_card_stub",
+]

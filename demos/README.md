@@ -15,6 +15,7 @@ pytest
 | Incident handoff | `python demos/incident_handoff.py` | ops → commander → SRE | Investigation plan + findings + recommendation |
 | Cross-runtime brief | `python demos/two_agents.py` | orchestrator → researcher → writer | Research JSON + markdown brief + audit |
 | Minimal research | `python demos/quickstart.py` | orchestrator → researcher | Findings JSON + audit |
+| Registry hub | `python demos/registry_hub.py` | hub → summarizer via registry | Gateway preview + Agent Card stub |
 
 ## Expected output
 
@@ -25,3 +26,5 @@ Each script prints structured JSON (or a markdown brief), then an audit trail of
 - [Getting started](../docs/getting-started.md)
 - [Python API](../docs/python-api.md)
 - Product site examples: https://a2aconnect.dev/examples
+
+CLI: `pip install -e .` then `a2aconnect demo registry`

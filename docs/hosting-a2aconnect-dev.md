@@ -1,3 +1,10 @@
+## Currently live
+
+- https://www.a2aconnect.dev
+- https://a2aconnect.dev → redirects to `www`
+
+Hosted on **Vercel** from `apps/web`. DNS via Namecheap BasicDNS (A `@` → Vercel, CNAME `www` → `*.vercel.app`).
+
 # Hosting the frontend at a2aconnect.dev
 
 Primary site stack is **Node.js (Next.js)** in `apps/web`.

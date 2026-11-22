@@ -29,9 +29,24 @@ export const metadata: Metadata = {
     template: "%s · A2AConnect",
   },
   description:
-    "A2AConnect — SDK-agnostic agent interop for mixed-runtime fleets. LF A2A–compatible. Complements MCP. Python core + Node.js site at a2aconnect.dev.",
+    "Hand off work across any agent runtime without sharing an SDK. LF A2A–compatible interop layer. Complements MCP. Live at a2aconnect.dev.",
   metadataBase: new URL("https://a2aconnect.dev"),
   alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://a2aconnect.dev",
+    siteName: "A2AConnect",
+    title: "A2AConnect — SDK-agnostic agent interop",
+    description:
+      "Interop layer for mixed-runtime agent fleets. Adapters, AgentPeer, policy & audit — complementary to LF A2A and MCP.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "A2AConnect — SDK-agnostic agent interop",
+    description:
+      "Hand off work across agent runtimes without sharing an SDK. https://a2aconnect.dev",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
